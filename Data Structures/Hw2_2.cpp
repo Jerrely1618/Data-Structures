@@ -14,6 +14,7 @@ int mains(int size, char* arr[]) {
 	/*****************************************/
 	for (int t = 1; t < 17; ++t) {
 		cout << arr[t] << endl;
+		cout << "Jerrely is ok" <<endl;
 	}
 	return 0;
 }
