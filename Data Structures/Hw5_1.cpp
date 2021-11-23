@@ -1,20 +1,12 @@
 //	Write a program that creates a singly link list of used automobiles containing nodes that describe the model name(string), 
-// price(int) and owner’s name.The program should create a list containing 12 nodes created by the user.There are only three types of models(BMW, Cadillac, Toyota)
-//  and the prices range from $2500 – $12, 500.  The program should allow the user to provide
+// price(int) and ownerï¿½s name.The program should create a list containing 12 nodes created by the user.There are only three types of models(BMW, Cadillac, Toyota)
+//  and the prices range from $2500 ï¿½ $12, 500.  The program should allow the user to provide
 //	..Print a printout of all cars contained in the list(model, price, owner)
 //	..Provide a histogram(global array) of all cars in the list portioned into $500 buckets
 //	..Calculate the average price of the cars contained in the list
 //	..Provide the details for all cars more expensive than the average price
-//	Remove all nodes having a price less than 25 % of average price
-//	Print a printout of all cars contained in the updated list(model, price, owner)
-//
-//	Write a program that implements a binary tree having nodes that contain the following items :
-//  (i)Fruit name(ii) price per lb.The program should allow the user to input any fruit name(duplicates allowed), price.
-// The root node should be initialized to{ “Lemon” , $3.00 }.  The program should be able to do the following tasks :
-//	create a basket of 15 fruits / prices
-//	list all the fruits created(name / price)
-//	calculate the average price of the basket
-//	print out all fruits having the first letter of their name >= ‘L’
+//	..Remove all nodes having a price less than 25 % of average price
+//	..Print a printout of all cars contained in the updated list(model, price, owner)
 #include <iostream>
 using namespace std;
 
@@ -108,7 +100,7 @@ public:
             curr->next = n1;
         }
     }
-    int avgCost() {
+    double avgCost() {
         Node* temp = head;
         int total = 0;
         int x = 0;
@@ -125,7 +117,7 @@ public:
         }
         return (total / x);
     }
-    void details(int avg){
+    void details(double avg){
         Node* temp = head;
         if (temp == NULL) {
             cout << "Empty List " << endl;
@@ -142,20 +134,24 @@ public:
             }
         }
     }
-    void deleteLess(int avg) {
+    void deleteLess(double avg) {
         Node* temp = head;
+        Node* nextNode = head->next;
         if (temp == NULL) {
             cout << "Empty List " << endl;
         }
+        else if (temp->price<avg*0.25){
+            head = temp->next;
+            temp = head;
+            nextNode = head->next;
+        }
         else {
-            while (temp != NULL)
-            {
-                if (temp->price < avg) {
-                    cout << "Model: " << temp->name << endl;
-                    cout << "Price: " << temp->price << endl;
-                    cout << "Owner: " << temp->owner << endl << endl;
+            while (nextNode!= NULL){
+                if (nextNode->price < avg*0.25) {
+                    temp->next = nextNode->next;
                 }
                 temp = temp->next;
+                nextNode = temp->next;
             }
         }
     }
@@ -199,9 +195,11 @@ int main()
     L1.insertNode(&n11);
     L1.insertNode(&n12);
 
+    L1.printList();
     L1.printHist();
-
-
-
+    double avg = L1.avgCost();
+    L1.details(avg);
+    L1.deleteLess(avg);
+    L1.printList();
 	return 0;
 }
