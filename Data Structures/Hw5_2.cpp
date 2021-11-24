@@ -6,27 +6,28 @@
 //	calculate the average price of the basket
 //	print out all fruits having the first letter of their name >= �L�-
 #include <iostream>
+#include <string>
 using namespace std;
-struct Node { // Node class to represent a node of the linked list.
+struct node { // Node class to represent a node of the linked list.
     string name;
     double priceLb;
-    Node* leftNext;
-    Node* rightNext;
+    node* leftNext;
+    node* rightNext;
 };	//end of Node
 struct node* new_node(string name,double value){
-	struct node *tmp = (struct node *)malloc(sizeof(struct node));
+	struct node *tmp= new node;
 	tmp->priceLb = value;
     tmp->name = name;
-	tmp->leftNext = tmp->rightNext = NULL;
+	tmp->leftNext = NULL; tmp->rightNext = NULL;
 	return tmp;
 }
-struct node* insert_node(struct node* node,double value){
-	if (node == NULL) return new_node(value);
+struct node* insert_node(struct node* node,double value, string name){
+	if (node == NULL) {return new_node(name, value); }
 	if (value < node->priceLb){
-		node->leftNext = insert_node(node->leftNext, value);
+		node->leftNext = insert_node(node->leftNext, value,name);
 	}
 	else if (value > node->priceLb){
-		node->rightNext = insert_node(node->rightNext, value);
+		node->rightNext = insert_node(node->rightNext, value,name);
 	}
 	return node;
 }
@@ -45,10 +46,11 @@ double avgPrice(struct node *root_node, double curr){
         total+=root_node->priceLb;
 		avgPrice(root_node->rightNext,total);
 	}
+	cout << total << endl;
     double avg = total/15;
     return avg;
 }
-int mainw(){
+int main(){
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -58,21 +60,24 @@ int mainw(){
 	cout << "Student Name: " << Name << endl;
 	cout << "----------------------------------------------" << endl;
 	/*****************************************/
-	struct Node* root = NULL;
+	struct node* root = NULL;
     int x = 0;
     double value = 0;
     string name;
-    root = insert_node(root,3.0,"Lemon");
+    root = insert_node(root,3.1,"Lemon");
     while(x<14){
         cout <<"Enter Value: "<<endl;
-        scanf("%d",value);
+		//cin >> value;
+		value = 5.3 + x;
         cout <<"Enter name: "<<endl;
-        cin>>name;
+        //cin>>name;
+		name = "Fruit ";
         insert_node(root,value,name);
         x++;
     }
     print(root);
     double average=avgPrice(root,0);
+	cout << average << endl;
 
 	return 0;
 }

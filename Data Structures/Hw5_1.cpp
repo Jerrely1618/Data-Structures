@@ -33,21 +33,20 @@ public:
         this->next = NULL;
     }
 };	//end of Node
-
 class Linkedlist {  // Linked list class to implement a linked list.
 private:
     Node* head;
 
 public:
 
-    Linkedlist() { head = NULL; }// Default constructor
+    Linkedlist() { head = nullptr; }// Default constructor
     void printList() {
         Node* temp = head;
-        if (temp == NULL) {
+        if (temp == nullptr) {
             cout << "Empty List " << endl;
         }
         else {
-            while (temp != NULL)
+            while (temp != nullptr)
             {
                 cout << "Model: " << temp->name << endl;
                 cout << "Price: " << temp->price << endl;
@@ -137,7 +136,7 @@ public:
     void deleteLess(double avg) {
         Node* temp = head;
         Node* nextNode = head->next;
-        if (temp == NULL) {
+        if (temp == nullptr) {
             cout << "Empty List " << endl;
         }
         else if (temp->price<avg*0.25){
@@ -145,18 +144,19 @@ public:
             temp = head;
             nextNode = head->next;
         }
-        else {
-            while (nextNode!= NULL){
-                if (nextNode->price < avg*0.25) {
-                    temp->next = nextNode->next;
-                }
-                temp = temp->next;
+        while (temp!= nullptr){
+            if (nextNode->price < avg*0.25) {
+                temp->next = nextNode->next;
+             }
+            temp = temp->next;
+            if (temp != nullptr) {
                 nextNode = temp->next;
             }
         }
     }
 };
-int main()
+
+int maindsadkja89()
 {
 	string Name;
 	/*****************************************/
@@ -168,18 +168,18 @@ int main()
 	cout << "----------------------------------------------" << endl;
 	/*****************************************/
 
-    Node n1("Bmw", 2500, "Mike");
+    Node n1("Bmw", 1100, "Mike");
     Node n2("Cadillac", 9000, "Alex");
     Node n3("Cadillac", 10000, "Joe");
-    Node n4("Toyota", 5000, "Mark");
+    Node n4("Toyota", 500, "Mark");
     Node n5("Bmw", 2750, "Arman");
     Node n6("Cadillac", 9250, "Arcg");
     Node n7("Cadillac", 12000, "Byron");
     Node n8("Toyota", 11500, "Pepe");
-    Node n9("Bmw", 2650, "Tyler");
+    Node n9("Bmw", 1500, "Tyler");
     Node n10("Cadillac", 9030, "Aldo");
     Node n11("Cadillac", 11200, "Peter");
-    Node n12("Toyota", 4000, "Erin");
+    Node n12("Toyota", 500, "Erin");
 
     Linkedlist L1;
     L1.insertNode(&n1);
@@ -198,7 +198,9 @@ int main()
     L1.printList();
     L1.printHist();
     double avg = L1.avgCost();
+    cout << avg*0.25 << endl;
     L1.details(avg);
+    cout << endl << endl << endl;
     L1.deleteLess(avg);
     L1.printList();
 	return 0;
