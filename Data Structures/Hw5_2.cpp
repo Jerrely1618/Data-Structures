@@ -3,8 +3,8 @@
 // ..The root node should be initialized to{ �Lemon� , $3.00 }.  The program should be able to do the following tasks :
 //	create a basket of 15 fruits / prices
 //	..list all the fruits created(name / price)
-//	calculate the average price of the basket
-//	print out all fruits having the first letter of their name >= �L�-
+//	..calculate the average price of the basket
+//	print out all fruits having the first letter of their name >= L
 #include <iostream>
 #include <string>
 using namespace std;
@@ -39,16 +39,23 @@ void print(struct node *root_node){
 		print(root_node->rightNext);
 	}
 }
-double avgPrice(struct node *root_node, double curr){
-	double total = curr; 
-    if (root_node != NULL){
-		avgPrice(root_node->leftNext, total);
-        total+=root_node->priceLb;
-		avgPrice(root_node->rightNext,total);
+void printLetter(struct node *root_node, char letter){
+	if (root_node != NULL){
+		print(root_node->leftNext);
+		if(root_node->name.at(0)>=letter){
+        	cout << root_node->name<<endl;
+		}
+		print(root_node->rightNext);
 	}
-	cout << total << endl;
-    double avg = total/15;
-    return avg;
+}
+double avgPrice(struct node *root_node){
+    if (root_node != NULL){
+		double total1=avgPrice(root_node->leftNext);
+        double total2+=root_node->priceLb;
+		double total3=avgPrice(root_node->rightNext);
+	}
+	double total= total1+total2+total3;
+	return total;
 }
 int main(){
 	string Name;
