@@ -33,6 +33,7 @@
     <ClCompile Include="Hw5_1.cpp" />
     <ClCompile Include="Hw5_2.cpp" />
     <ClCompile Include="Hw6_1.cpp" />
+    <ClCompile Include="Hw6_2.cpp" />
     <ClCompile Include="Hw7_1.cpp" />
     <ClCompile Include="Hw8_1.cpp" />
     <ClCompile Include="Hw9_1.cpp" />

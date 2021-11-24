@@ -4,7 +4,7 @@
 //	create a basket of 15 fruits / prices
 //	..list all the fruits created(name / price)
 //	..calculate the average price of the basket
-//	print out all fruits having the first letter of their name >= L
+//	..print out all fruits having the first letter of their name >= L
 #include <iostream>
 #include <string>
 using namespace std;
@@ -41,26 +41,30 @@ void print(struct node *root_node){
 }
 void printLetter(struct node *root_node, char letter){
 	if (root_node != NULL){
-		print(root_node->leftNext);
+		printLetter(root_node->leftNext,letter);
 		if(root_node->name.at(0)>=letter){
         	cout << root_node->name<<endl;
 		}
-		print(root_node->rightNext);
+		printLetter(root_node->rightNext,letter);
 	}
 }
 double avgPrice(struct node *root_node,int num){
-    if (root_node != NULL){
-		double total1=avgPrice(root_node->leftNext,num++);
-        double total2+=root_node->priceLb;
-		double total3=avgPrice(root_node->rightNext,num++);
+	double total1 = 0;
+	double total2 = 0;
+	double total3 = 0;
+	if (root_node != NULL){
+		num++;
+		total1=avgPrice(root_node->leftNext,num);
+        total2+=root_node->priceLb;
+		total3=avgPrice(root_node->rightNext,num);
 	}
 	double total= total1+total2+total3;
-	if(num==15){
+	if(num==1){
 		return total/15;
 	}
-	else{return total;}
+	else { return total; }
 }
-int main(){
+int mainkjdhajks(){
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -78,16 +82,14 @@ int main(){
     while(x<14){
         cout <<"Enter Value: "<<endl;
 		//cin >> value;
-		value = 5.3 + x;
+		value = x;
         cout <<"Enter name: "<<endl;
         //cin>>name;
-		name = "Fruit ";
+		name = "Fruit";
         insert_node(root,value,name);
         x++;
     }
-    print(root);
     double average=avgPrice(root,0);
-	cout << average << endl;
-
+	printLetter(root,'M');
 	return 0;
 }

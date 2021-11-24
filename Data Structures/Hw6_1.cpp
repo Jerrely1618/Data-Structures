@@ -6,13 +6,13 @@
 #include <iostream>
 using namespace std;
 template<typename T>
-void swap(T& first, T& second){
-	T* temp = first;
-	first=second;
-	second = temp;
+void Swap(T* first, T* second){
+	T temp = *first;
+	*first = *second;
+	*second = temp;
 }
 
-int mainsuyh() {
+int maingjhgyugiuhoi9() {
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -32,13 +32,17 @@ int mainsuyh() {
 	c='s';
 	d='h';
 	e=3.14;
-	f=2.71828;
+	f=2.71;
 
-	swap(a,b);
-	swap(c,d);
-	swap(e,f);
-	swap(g,h);
+	Swap(&a, &b);
+	Swap(&c, &d);
+	Swap(&e, &f);
 
+	cout << a << " " << b << endl;
+
+	cout << c << " " << d << endl;
+
+	cout << e << " " << f << endl;
 
 	return 0;
 }

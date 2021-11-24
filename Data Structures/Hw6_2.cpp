@@ -4,8 +4,6 @@
 //...overloaded assignment operator,  
 //...index operator, 
 //...insertion and extractor operators.
-#include <iostream>
-using namespace std;
 #define N 64
 #include <iostream>
 using namespace std;
