@@ -4,7 +4,7 @@
 //		sorts the arrays by ascending value
 //		reverses the values of the sorted arrays
 //		passes the arrays to a function Sum() that  calculates the sum of all the edata elements
-//		Write a program that contains a “Dog” class whose data consists of int Id and a static int cnt that keeps track of how many dogs have been created.The Dog class should contain default constructor  that sets the Id value with the updated vale of cntand prints a message : cout << “dog #Id : ” << X[i].Id.The Dog class should also have a copy constructor that updates cnt and assigns it to the Id# of constructed dog.The copy constructor should output the Id# of the constructed object.The Dog class should have a destructor that reduces the cnt value each time a “Dog” goes out of scope.The destructor should print the Id# of the “dog” that goes out of scope.
+//		Write a program that contains a ï¿½Dogï¿½ class whose data consists of int Id and a static int cnt that keeps track of how many dogs have been created.The Dog class should contain default constructor  that sets the Id value with the updated vale of cntand prints a message : cout << ï¿½dog #Id : ï¿½ << X[i].Id.The Dog class should also have a copy constructor that updates cnt and assigns it to the Id# of constructed dog.The copy constructor should output the Id# of the constructed object.The Dog class should have a destructor that reduces the cnt value each time a ï¿½Dogï¿½ goes out of scope.The destructor should print the Id# of the ï¿½dogï¿½ that goes out of scope.
 //	
 //		Create a vector array of dogs(size 8).
 //		Output the Id values of all the dogs
@@ -14,7 +14,7 @@
 using namespace std;
 
 
-int mainsbnc(int size, char* arr[]) {
+int mainsbnc() {
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -24,8 +24,6 @@ int mainsbnc(int size, char* arr[]) {
 	cout << "Student Name: " << Name << endl;
 	cout << "----------------------------------------------" << endl;
 	/*****************************************/
-	for (int t = 1; t < 17; ++t) {
-		cout << arr[t] << endl;
-	}
+	
 	return 0;
 }

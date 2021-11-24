@@ -48,14 +48,17 @@ void printLetter(struct node *root_node, char letter){
 		print(root_node->rightNext);
 	}
 }
-double avgPrice(struct node *root_node){
+double avgPrice(struct node *root_node,int num){
     if (root_node != NULL){
-		double total1=avgPrice(root_node->leftNext);
+		double total1=avgPrice(root_node->leftNext,num++);
         double total2+=root_node->priceLb;
-		double total3=avgPrice(root_node->rightNext);
+		double total3=avgPrice(root_node->rightNext,num++);
 	}
 	double total= total1+total2+total3;
-	return total;
+	if(num==15){
+		return total/15;
+	}
+	else{return total;}
 }
 int main(){
 	string Name;
