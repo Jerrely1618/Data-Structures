@@ -17,6 +17,20 @@ void SUM(T v1) {
 	}
 	cout << "Sum of the vector: " << v1[0] << endl;
 }
+void SORT(T* v1){
+	int temp(0);
+	for (int x = 0; x < 8; x++){
+		for (int y = x + 1; y < 8; y++){
+			if (v1[x] > v1[y])
+			{
+				temp = *v1[x];
+				*v1[x] = *v1[y];
+				*v1[y] = temp;
+			}
+		}
+	}
+
+}
 
 
 int asdmaifsdfsan() {
