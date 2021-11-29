@@ -1,12 +1,4 @@
-//	Write a program that creates a singly link list of used automobiles containing nodes that describe the model name(string), 
-// price(int) and owner�s name.The program should create a list containing 12 nodes created by the user.There are only three types of models(BMW, Cadillac, Toyota)
-//  and the prices range from $2500 � $12, 500.  The program should allow the user to provide
-//	..Print a printout of all cars contained in the list(model, price, owner)
-//	..Provide a histogram(global array) of all cars in the list portioned into $500 buckets
-//	..Calculate the average price of the cars contained in the list
-//	..Provide the details for all cars more expensive than the average price
-//	..Remove all nodes having a price less than 25 % of average price
-//	..Print a printout of all cars contained in the updated list(model, price, owner)
+
 #include <iostream>
 using namespace std;
 
@@ -156,7 +148,7 @@ public:
     }
 };
 
-int maindsadkja89()
+int sdfmadsfin()
 {
 	string Name;
 	/*****************************************/
@@ -198,10 +190,10 @@ int maindsadkja89()
     L1.printList();
     L1.printHist();
     double avg = L1.avgCost();
-    cout << avg*0.25 << endl;
     L1.details(avg);
     cout << endl << endl << endl;
     L1.deleteLess(avg);
+    cout << "" << endl;
     L1.printList();
 	return 0;
 }

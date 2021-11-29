@@ -1,8 +1,4 @@
 
-//2.	Create template for the array class so that one can create an array of
-// arbitrary size for ints, floats, chars, etc.The class should contain
-// default / parametrized constructor, copy constructor, destructor, overloaded
-// assignment operator,  index operator, insertionand extractor operators.
 #include <iostream>
 using namespace std;
 template<typename T>
@@ -12,7 +8,7 @@ void Swap(T* first, T* second){
 	*second = temp;
 }
 
-int maingjhgyugiuhoi9() {
+int maijhgjn() {
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;

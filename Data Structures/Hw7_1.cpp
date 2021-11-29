@@ -12,13 +12,12 @@
 //Explain the stream of outputs that this problem creates.
 #include <iostream>
 #include <string>
+#include <algorithm>
 #include <vector>
 using namespace std;
 
-void Sum(vector){
-}
 
-int mainsbnc() {
+int main() {
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -32,8 +31,7 @@ int mainsbnc() {
 	vector<float> v2(8);
 	vector<char> v3(8);
 	vector<string> v4(8);
-	vector<pair> v5(8);
-	
+	vector<pair<int,char>> v5(8);
 	for(int y=0;y<8;y++){
 			int z=0;
 			cin>>z;
@@ -51,12 +49,14 @@ int mainsbnc() {
 	}
 	for(int y=0;y<8;y++){
 			string c="";
-			getline(cin,c);
+			cout << "c" << c << endl;
+			cin>>c;
 			v4[y]=c;
 	}
 	for(int y=0;y<8;y++){
-			pair d=0;
-			cin>>d;
+			pair<int,char> d;
+			cin>>d.first;
+			cin >> d.second;
 			v5[y]=d;
 	}
 	

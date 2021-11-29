@@ -21,8 +21,8 @@ public:
             pType[x] = 0;
         }
     };
-    Array(const Array& rhs) { itsSize = rhs->itsSize; pType = rhs->pType; };//copy constructor
-    ~Array() { delete[] pType; };       //destructor
+    Array(const Array& rhs) { itsSize = rhs->itsSize; pType = rhs->pType; };
+    ~Array() { delete[] pType; };
 
     // operators
     Array& operator=(const Array& rhs) { 
@@ -32,7 +32,7 @@ public:
         return nArray;
     };
     T& operator[](int offSet) { return pType[offSet];};
-    const T& operator[](int offSet) const { return pType[offSet]; }; //works with const objects
+    const T& operator[](int offSet) const { return pType[offSet]; };
 
     // friend function
     friend ostream& operator<< (ostream& out, const Array<T>& rhs) {
@@ -45,7 +45,7 @@ public:
     }
 };
 
-int mainsnbv() {
+int uukhukh() {
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -55,7 +55,11 @@ int mainsnbv() {
 	cout << "Student Name: " << Name << endl;
 	cout << "----------------------------------------------" << endl;
 	/*****************************************/
-	
+    Array<int> r1(5);
+    r1[1] = 2;
+    cout <<"r[1] = "<< r1[1] << endl;
+    cin >>r1[2];
+    cout << "r[2] after cin>>: "<< r1[2] << endl;;
 
 	return 0;
 }

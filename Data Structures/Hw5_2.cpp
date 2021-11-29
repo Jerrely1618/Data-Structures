@@ -1,10 +1,4 @@
-//	..Write a program that implements a binary tree having nodes that contain the following items :
-//  (i)Fruit name(ii) price per lb.The program should allow the user to input any fruit name(duplicates allowed), price.
-// ..The root node should be initialized to{ �Lemon� , $3.00 }.  The program should be able to do the following tasks :
-//	create a basket of 15 fruits / prices
-//	..list all the fruits created(name / price)
-//	..calculate the average price of the basket
-//	..print out all fruits having the first letter of their name >= L
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -64,7 +58,7 @@ double avgPrice(struct node *root_node,int num){
 	}
 	else { return total; }
 }
-int mainkjdhajks(){
+int maingf(){
 	string Name;
 	/*****************************************/
 	cout << "Student Enter Name" << endl;
@@ -74,21 +68,20 @@ int mainkjdhajks(){
 	cout << "Student Name: " << Name << endl;
 	cout << "----------------------------------------------" << endl;
 	/*****************************************/
-	struct node* root = NULL;
+	struct node* root = nullptr;
     int x = 0;
     double value = 0;
     string name;
     root = insert_node(root,3.1,"Lemon");
     while(x<14){
         cout <<"Enter Value: "<<endl;
-		//cin >> value;
-		value = x;
+		cin >> value;
         cout <<"Enter name: "<<endl;
-        //cin>>name;
-		name = "Fruit";
+        cin>>name;
         insert_node(root,value,name);
         x++;
     }
+	print(root);
     double average=avgPrice(root,0);
 	printLetter(root,'M');
 	return 0;
