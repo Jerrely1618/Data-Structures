@@ -1,9 +1,4 @@
-//2.	Create template for the array class so that one can create an array of
-// arbitrary size for ints, floats, chars, etc.The class should contain
-// ...default / parametrized constructor, copy constructor, destructor, 
-//...overloaded assignment operator,  
-//...index operator, 
-//...insertion and extractor operators.
+/*
 #define N 64
 #include <iostream>
 using namespace std;
@@ -47,14 +42,14 @@ public:
 
 int uukhukh() {
 	string Name;
-	/*****************************************/
+	/*****************************************//*
 	cout << "Student Enter Name" << endl;
 	cin >> Name;
 	cout << "----------------------------------------------" << endl;
 	cout << "FIle: " << __FILE__ << " Date: " << __DATE__ << endl;
 	cout << "Student Name: " << Name << endl;
 	cout << "----------------------------------------------" << endl;
-	/*****************************************/
+	/*****************************************//*
     Array<int> r1(5);
     r1[1] = 2;
     cout <<"r[1] = "<< r1[1] << endl;
@@ -63,3 +58,4 @@ int uukhukh() {
 
 	return 0;
 }
+*/
