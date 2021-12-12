@@ -22,6 +22,8 @@
     <ClCompile Include="Exam1Question1.cpp" />
     <ClCompile Include="Exam1Question2.cpp" />
     <ClCompile Include="Exam1Question3.cpp" />
+    <ClCompile Include="Hw10_1.cpp" />
+    <ClCompile Include="Hw10_2.cpp" />
     <ClCompile Include="Hw1_1.cpp" />
     <ClCompile Include="Hw1_2.cpp" />
     <ClCompile Include="Hw2_1.cpp" />
@@ -37,7 +39,9 @@
     <ClCompile Include="Hw7_1.cpp" />
     <ClCompile Include="Hw7_2.cpp" />
     <ClCompile Include="Hw8_1.cpp" />
+    <ClCompile Include="Hw8_2.cpp" />
     <ClCompile Include="Hw9_1.cpp" />
+    <ClCompile Include="Hw9_2.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
