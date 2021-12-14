@@ -1,13 +1,9 @@
-////•	Input a series fruit names(~20) with their corresponding weights in a multimap container.
-////?	Print all the fruits and corresponding weights
-////?	Find the heaviest and lighter fruits and print their name and weight
-//
 //#include <iostream>
 //#include <map>
 //using namespace std;
 //
 //
-//int gdmadsin() {
+//int main() {
 //	string Name;
 //	/*****************************************/
 //	cout << "Student Enter Name" << endl;

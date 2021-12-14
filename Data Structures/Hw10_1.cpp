@@ -1,8 +1,3 @@
-////•	Create integer list of size 24
-////o	insert elements from - 3 to 29
-////o	using iterator print out all nodes
-////o	remove all  elements divisible by 3
-////o	using iterator print out all nodes
 //
 //#include <iostream>
 //#include <list>

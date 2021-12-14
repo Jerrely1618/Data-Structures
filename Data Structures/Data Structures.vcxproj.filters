@@ -84,5 +84,11 @@
     <ClCompile Include="Hw10_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FinalQuestion1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FinalQuestion2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

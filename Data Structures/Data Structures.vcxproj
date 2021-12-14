@@ -22,6 +22,8 @@
     <ClCompile Include="Exam1Question1.cpp" />
     <ClCompile Include="Exam1Question2.cpp" />
     <ClCompile Include="Exam1Question3.cpp" />
+    <ClCompile Include="FinalQuestion1.cpp" />
+    <ClCompile Include="FinalQuestion2.cpp" />
     <ClCompile Include="Hw10_1.cpp" />
     <ClCompile Include="Hw10_2.cpp" />
     <ClCompile Include="Hw1_1.cpp" />

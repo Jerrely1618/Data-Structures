@@ -1,17 +1,10 @@
-////•	Create integer vector of size 100
-////o	insert elements from 1 to 100
-////o	use a forward iterator to iterate over initial half  
-//// of the vector size and a
-////backward iterator to iterate over the final half of the vector.
-//// For each iteration take
-////the sum of the two numbers and print sum.
 //
 //#include <iostream>
 //#include <vector>
 //using namespace std;
 //
 //
-//int masdasfain() {
+//int main() {
 //	string Name;
 //	/*****************************************/
 //	cout << "Student Enter Name" << endl;
